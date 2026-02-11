@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<head>
+<title>Course Reistration Form</title>
+<style>
+#logo-text {
+color: red;
+font-size: 50px;
+}
+form {
+background-color: rgb(240, 247, 245);
+border: 1px solid;
+border-radius: 20px;
+text-align: center;
+margin: 30px 200px 30px 200px;
+transition: box-shadow 0.25s;
+} form:hover {
+box-shadow: 2px 2px 30px rgb(0, 0, 0, 0.1);
+}input, select {
+padding: 0;
+margin-bottom: 30px;
+border-radius: 15px;
+padding: 5px;
+}button {
+font-size: 15px;
+font-weight: bold;
+margin: 30px;
+border: 2px solid;
+cursor: pointer;
+background: rgb(240, 247, 245);
+border-radius: 10px;
+padding: 8px 20px 8px 20px;
+}
+button:hover {
+background-color: rgb(143, 211, 243);
+}
+label {
+font-weight: bold;
+font-size: 17px;
+}
+h1 {
+background: rgb(240, 247, 245);
+}
+</style>
+</head>
+<body>
+<form>
+<img style="height: 200px;" src="logo.png">
+<marquee id="logo-text" direction="left">Graphic Era Deemed University</marquee>
+<h1>Student Registration Form</h1>
+<label>Student Name :</label>
+<input type="text" placeholder="John Doe">
+<br>
+<label>University Email ID :</label>
+<input type="email" placeholder="johndoe@geu.ac.in" pattern="@geu\.ac\.in$">
+<br>
+<label>USN/Roll Number :</label>
+<input type="text" placeholder="2023XXX">
+<br>
+<label>Course :</label>
+<select name="course" required>
+<!-- Disabled selected is used so that the user cannot select a particular option -->
+<option disabled selected>---Select---</option>
+<option>B.Tech</option>
+<option>M.Tech</option>
+<option>BCA</option>
+</select>
+<br>
+<label>Age :</label>
+<input type="number" min="18" max="30" placeholder="XX">
+<br>
+<label>Gender :
+<input name="gender" type="radio"> Male
+<input name="gender" type="radio"> Female
+</label>
+<br>
+<label for="Resume">Resume</label>
+<br>
+<input type="file" id="Resume">
+<br>
+<button>Submit</button>
+<button>Reset</button>
+</form>
+</body>
+</html>
+thankyou.html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Thankyou</title>
+<style>
+body{
+background-color: azure;
+}
+</style>
+</head>
+<body>
+<h3 align="center">Thankyou for your submission!!</h3>
+<p align="center">Your form is submitted Successfully!</p>
+</body>
+</html>

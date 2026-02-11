@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Student Feedback Form</title>
+
+    <link rel="stylesheet" href="first.css">
+
+    
+    <style>
+        form {
+            width: 400px;
+            margin: 50px auto;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+            background-color: #ffffff;
+        }
+
+        .form-group {
+            margin-bottom: 15px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+
+        input, select, textarea {
+            width: 100%;
+            padding: 8px;
+            box-sizing: border-box;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Student Feedback Form</h1>
+
+    <div class="form-container">
+        <form>
+            <div class="form-group">
+                <label for="name">Student Name</label>
+                <input type="text" id="name" name="name" required>
+            </div>
+
+            <div class="form-group">
+                <label for="email">Email Address</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+
+            <div class="form-group">
+                <label for="course">Course Selection</label>
+                <select id="course" name="course">
+                    <option value="">Select a course</option>
+                    <option value="btech">B.Tech</option>
+                    <option value="bca">BCA</option>
+                    <option value="bsc">B.Sc</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="feedback">Feedback / Comments</label>
+                <textarea id="feedback" name="feedback" rows="4"></textarea>
+            </div>
+
+            
+            <input
+                type="submit"
+                value="Submit"
+                style="background-color: #ff5733; color: white; border: none; padding: 10px 20px; font-size: 16px; cursor: pointer;"
+            >
+        </form>
+    </div>
+
+</body>
+</html>

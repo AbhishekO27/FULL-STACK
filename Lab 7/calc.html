@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Calculator</title>
+
+<style>
+    body {
+        background: #eee;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        font-family: Arial, sans-serif;
+    }
+
+    .calculator {
+        width: 260px;
+        background: #2c2f2f;
+        padding: 15px;
+        border-radius: 12px;
+        box-shadow: 0 10px 25px rgba(0,0,0,0.4);
+    }
+
+    .display {
+        background: black;
+        color: white;
+        height: 60px;
+        font-size: 28px;
+        text-align: right;
+        padding: 10px;
+        border-radius: 8px;
+        margin-bottom: 15px;
+        overflow: hidden;
+    }
+
+    .buttons {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 10px;
+    }
+
+    button {
+        height: 45px;
+        font-size: 18px;
+        border: none;
+        border-radius: 6px;
+        cursor: pointer;
+    }
+
+    .num {
+        background: #e6e6e6;
+    }
+
+    .operator {
+        background: #f2994a;
+        color: white;
+    }
+
+    .equal {
+        background: green;
+        color: white;
+        grid-row: span 2;
+        height: 100%;
+    }
+
+    .clear {
+        background: red;
+        color: white;
+    }
+</style>
+</head>
+
+<body>
+
+<div class="calculator">
+    <div class="display" id="display">0</div>
+
+    <div class="buttons">
+        <button class="operator" onclick="calc.append('*')">*</button>
+        <button class="operator" onclick="calc.append('/')">/</button>
+        <button class="operator" onclick="calc.append('-')">-</button>
+        <button class="operator" onclick="calc.append('+')">+</button>
+
+        <button class="num" onclick="calc.append('9')">9</button>
+        <button class="num" onclick="calc.append('8')">8</button>
+        <button class="num" onclick="calc.append('7')">7</button>
+        <button class="num" onclick="calc.append('6')">6</button>
+
+        <button class="num" onclick="calc.append('5')">5</button>
+        <button class="num" onclick="calc.append('4')">4</button>
+        <button class="num" onclick="calc.append('3')">3</button>
+        <button class="num" onclick="calc.append('2')">2</button>
+
+        <button class="num" onclick="calc.append('1')">1</button>
+        <button class="num" onclick="calc.append('0')">0</button>
+        <button class="num" onclick="calc.append('.')">.</button>
+
+        <button class="equal" onclick="calc.calculate()">=</button>
+
+        <button class="clear" onclick="calc.clear()">C</button>
+    </div>
+</div>
+
+<script>
+    const calc = {
+        display: document.getElementById("display"),
+
+        append(value) {
+            if (this.display.innerText === "0") {
+                this.display.innerText = value;
+            } else {
+                this.display.innerText += value;
+            }
+        },
+
+        calculate() {
+            try {
+                this.display.innerText = eval(this.display.innerText);
+            } catch {
+                this.display.innerText = "Error";
+            }
+        },
+
+        clear() {
+            this.display.innerText = "0";
+        }
+    };
+</script>
+
+</body>
+</html>

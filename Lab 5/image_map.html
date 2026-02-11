@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hospital Map</title>
+</head>
+  <style>
+        img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+            margin: auto;
+        }
+    </style>
+    
+<body>
+
+    <img src="main.png" usemap="#mymap" alt="Hospital Map">
+
+    <map name="mymap">
+        <area shape="rect"
+              coords="83,693,276,750"
+              href="opd.html"
+              alt="OPD"
+              title="OPD">
+        <area shape="circle"
+              coords="510,727,66"
+              href="diagnostic.html"
+              alt="Diagnostic Lab"
+              title="Diagnostic Lab">
+        <area shape="poly"
+              coords="798,690,850,660,907,694,907,764,850,792,790,757"
+              href="emergency.html"
+              alt="Emergency"
+              title="Emergency">
+    </map>
+</body>
+</html>

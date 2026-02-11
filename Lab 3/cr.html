@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Registration</title>
+
+    <style>
+        input[type=submit]:hover{
+            background-color: lightgreen;
+            cursor: pointer;
+            border-radius: 25px;
+        }
+
+        input[type=reset]:hover{
+            background-color: lightgreen;
+            cursor: pointer;
+        }
+
+        input:invalid{
+            border: 2px solid red;
+        }
+
+        input:valid{
+            border: 2px solid green;
+        }
+    </style>
+</head>
+
+<body>
+    <img src="logo.png" align="right" width="100px"><br><br>
+
+    <h1>Student Registration Form</h1>
+
+    <form action="submission.html" method="post" target="_blank" autocomplete="on">
+
+        <label for="fname">Student Name</label>
+        <input type="text" name="fname" id="fname" required pattern="[Kk]ohli" minlength="3" maxlength="30">
+        <br><br>
+
+        <label for="email">Email</label>
+        <input type="email" name="email" id="email" required>
+        <br><br>
+
+        <label for="roll">University Roll</label>
+        <input type="number" name="roll" id="roll" min="18" max="30" required>
+        <br><br>
+
+        <label for="course">Course</label>
+        <select name="course" id="course">
+            <option value="BTECH">BTECH</option>
+            <option value="MCA">MCA</option>
+            <option value="MTECH">MTECH</option>
+            <option value="MA">MA</option>
+            <option value="BA">BA</option>
+        </select>
+        <br><br>
+
+        <label>Gender</label>
+        <input type="radio" id="male" name="gender" required>
+        <label for="male">Male</label>
+
+        <input type="radio" id="female" name="gender">
+        <label for="female">Female</label>
+        <br><br>
+
+        <input type="submit" value="Submit">
+        <input type="reset" value="Reset">
+
+    </form>
+
+</body>
+</html>

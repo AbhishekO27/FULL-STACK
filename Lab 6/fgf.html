@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Student Feedback Form</title>
+
+    <link rel="stylesheet" href="first.css">
+
+    
+    <style>
+        form {
+         width: 600px;
+        height: 600px;
+        margin: 50px auto;
+         padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+            background-color: #ffffff;
+        }
+        .form-group {
+            margin-bottom: 15px;
+        }
+        label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+
+        input, select, textarea {
+            width: 100%;
+            padding: 8px;
+            box-sizing: border-box;
+        }
+        input[type=submit]:hover{
+            background-color: lightgreen;
+            cursor: pointer;
+            border-radius: 25px;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Student Feedback Form</h1>
+
+    
+       <form action="submit.html" method="get" target="_blank" >
+            
+            <label for="name">Student Name</label>
+            <input type="text" id="name" name="name" required minlength="3" maxlength="30">
+            <br>            
+
+            
+            <label for="email">Email Address</label>
+            <input type="text" id="email" name="email" required pattern="[0-9]+@geu.ac.in">
+            <br>
+
+            
+            <label for="course">Course Selection</label>
+            <select id="course" name="course">
+                <option value="">Select a course</option>
+                <option value="btech">Compiler Design</option>
+                <option value="web">Web Development</option>
+                <option value="ml">Machine Learning</option>
+                <option value="carrer">Carrer Skills</option>
+            </select>
+            <br>
+
+         
+            <label for="feedback">Feedback / Comments</label>
+            <textarea id="feedback" name="feedback" rows="8"></textarea>
+            <br>
+            <input
+                type="submit"
+                value="Submit"
+                style="background-color: blanchedalmond;"
+            >
+        </form>
+    </div>
+
+</body>
+</html>
