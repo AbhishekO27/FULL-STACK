@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Online Examination Registration</title>
+
+<style>
+body {
+    font-family: Arial;
+    text-align: center;
+    background-color: rgb(166, 190, 223);
+}
+
+h1 {
+    background-color: rgb(163, 8, 241);
+    color: white;
+    padding: 15px;
+}
+
+button {
+    padding: 10px 20px;
+    font-size: 18px;
+    background-color: green;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+</style>
+
+</head>
+
+<body>
+
+<h1>Online Examination Registration</h1>
+
+<p>Click below to register and generate admit card</p>
+
+<button onclick="register()">Register</button>
+
+<script>
+
+function register() {
+
+    alert("Welcome to Online Exam Registration");
+
+    var name = prompt("Enter your Name:");
+
+    if (name == "" || name == null) {
+        alert("Name is required");
+        return;
+    }
+
+    var confirmBox = confirm("Do you want to submit registration?");
+
+    if (confirmBox == true) {
+
+        var win = window.open("", "", "width=500,height=500");
+
+        win.document.write("<h2>Admit Card</h2>");
+        win.document.write("<p>Name: " + name + "</p>");
+        win.document.write("<p>Subject: Computer Science</p>");
+        win.document.write("<p>Date: 20 March 2026</p>");
+
+        win.document.write("<br><button onclick='window.print()'>Print</button>");
+        win.document.write("<button onclick='window.close()'>Close</button>");
+
+    } else {
+
+        alert("Registration Cancelled");
+
+    }
+
+}
+
+</script>
+
+</body>
+</html>

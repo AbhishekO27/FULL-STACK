@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Calendar</title>
+    <style>
+        table {
+            border-collapse: collapse;
+            width: 300px;
+            text-align: center;
+        }
+        th {
+            background-color: lightgray;
+        }
+        th, td {
+            padding: 8px;
+        }
+    </style>
+</head>
+<body onload="showCalendar()">
+
+    <select id="month" onchange="showCalendar()">
+        <option value="0">Jan</option>
+        <option value="1">Feb</option>
+        <option value="2">Mar</option>
+        <option value="3">April</option>
+        <option value="4">May</option>
+        <option value="5">June</option>
+        <option value="6">July</option>
+        <option value="7">August</option>
+        <option value="8">September</option>
+        <option value="9">October</option>
+        <option value="10">November</option>
+        <option value="11">December</option>
+    </select>
+
+    <select id="year" onchange="showCalendar()">
+        <option value="2024">2024</option>
+        <option value="2025">2025</option>
+        <option value="2026">2026</option>
+    </select>
+
+    <br><br>
+
+    <table border="1" id="calendar"></table>
+
+<script>
+function showCalendar() {
+
+    let month = parseInt(document.getElementById("month").value);
+    let year = parseInt(document.getElementById("year").value);
+
+    let firstDay = new Date(year, month, 1).getDay();
+    let totalDays = new Date(year, month + 1, 0).getDate();
+
+    let cal = "<tr>";
+
+    let days = ["SUN", "MON", "TUE", "WED", "THU", "FRI", "SAT"];
+
+    // Header row
+    for (let i = 0; i < 7; i++) {
+        cal += "<th>" + days[i] + "</th>";
+    }
+
+    cal += "</tr><tr>";
+
+    // Empty cells before first day
+    for (let i = 0; i < firstDay; i++) {
+        cal += "<td></td>";
+    }
+
+    // Date cells
+    for (let d = 1; d <= totalDays; d++) {
+        cal += "<td>" + d + "</td>";
+
+        if ((d + firstDay) % 7 === 0 && d !== totalDays) {
+            cal += "</tr><tr>";
+        }
+    }
+
+    cal += "</tr>";
+
+    document.getElementById("calendar").innerHTML = cal;
+}
+</script>
+
+</body>
+</html>

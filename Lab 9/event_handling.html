@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>College Home Page</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+        }
+
+        header {
+            background-color: rgb(88, 88, 241);
+            color: white;
+            padding: 20px;
+        }
+
+        img {
+            margin: 10px;
+            border-radius: 10px;
+        }
+
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            margin-top: 20px;
+            cursor: pointer;
+            border-radius: 10%;
+        }
+    </style>
+
+    <script>
+        let colors = ["#f4f4f4", "#d1e7dd", "#cff4fc", "#f8d7da", "#fff3cd"];
+        let index = 0;
+
+        function changeTheme() {
+            index = Math.floor(Math.random()*colors.length);
+            document.body.style.backgroundColor = colors[index];
+        }
+    </script>
+</head>
+
+<body>
+
+    <header>
+        <h1>Graphic Era University </h1>
+    </header>
+
+    <img src="logo.png" alt="College Logo">
+
+    <h2>About the University</h2>
+    <p>
+        Graphic Era University (formerly known as Graphic Era Institute of Technology) is an Indian private graphic university located in Clement Town, Dehradun, Uttarakhand. It was founded by Dr. Kamal Ghanshala in 1993.[2]
+
+In 2008, the institution was granted the status of a deemed university. In 2022, it received accreditation from the National Assessment and Accreditation Council (NAAC) with a Grade A+.[3][4][5] The National Institutional Ranking Framework ranked it 72nd overall in India in 2025[6] and 52nd in the engineering category.[6]
+
+Grafest is a yearly college festival held at the university
+    </p>
+
+    
+    <h2>Campus Photos</h2>
+    <img src="campus1.png" alt="Campus Photo 1">
+    <img src="campus2.png" alt="Campus Photo 2">
+    <img src="campus3.png" alt="Campus Photo 3">
+   
+    <br>
+    <button onclick="changeTheme()">Change Theme</button>
+
+</body>
+</html>
