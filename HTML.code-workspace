@@ -1,0 +1,34 @@
+{
+	"folders": [
+		{
+			"path": "."
+		},
+		{
+			"path": "../OneDrive/Documents/Lab 8.2"
+		},
+		{
+			"path": "../../../xamppp/htdocs/Lab 12"
+		},
+		{
+			"path": "../../../xamppp/htdocs/Lab 14"
+		},
+		{
+			"path": "../../../xamppp/htdocs/Lab 15"
+		},
+		{
+			"path": "../../../xamppp/htdocs/Lab 16"
+		},
+		{
+			"path": "../../../xamppp/htdocs/Lab 17"
+		},
+		{
+			"path": "../../../xamppp/htdocs/Lab 18"
+		},
+		{
+			"path": "../../../xamppp/htdocs/Lab 19"
+		}
+	],
+	"settings": {
+		"liveServer.settings.multiRootWorkspaceName": "HTML"
+	}
+}

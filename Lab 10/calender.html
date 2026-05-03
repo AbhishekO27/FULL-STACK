@@ -56,19 +56,18 @@ function showCalendar() {
 
     let days = ["SUN", "MON", "TUE", "WED", "THU", "FRI", "SAT"];
 
-    // Header row
+  
     for (let i = 0; i < 7; i++) {
         cal += "<th>" + days[i] + "</th>";
     }
 
     cal += "</tr><tr>";
 
-    // Empty cells before first day
     for (let i = 0; i < firstDay; i++) {
         cal += "<td></td>";
     }
 
-    // Date cells
+    
     for (let d = 1; d <= totalDays; d++) {
         cal += "<td>" + d + "</td>";
 

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Stopwatch</title>
+    <style>
+        body {
+            font-family: Arial;
+            text-align: center;
+            margin-top: 100px;
+        }
+        #display {
+            font-size: 40px;
+            margin-bottom: 20px;
+        }
+        button {
+            padding: 10px 20px;
+            margin: 5px;
+            font-size: 16px;
+            background-color: antiquewhite;
+        }
+    </style>
+</head>
+<body>
+    <h2>Stopwatch</h2>
+    <div id="display">0</div>
+    <spam>
+    <button onclick="start()">START</button>
+    <button onclick="pause()">PAUSE</button>
+    <button onclick="reset()">RESET</button>
+    </spam>
+    <script>
+        let seconds = 0;
+        let timer = null;
+
+        function start() {
+            if (timer === null) {
+                timer = setInterval(updatetime, 1000);
+            }
+        }
+        function updatetime() {
+            seconds++;
+            document.getElementById('display').innerHTML = "<i>" + seconds + "</i>";
+        }
+
+        function pause() {
+            clearInterval(timer);
+            timer = null;
+        }
+
+        function reset() {
+            clearInterval(timer);
+            timer = null;
+            seconds = 0;
+            document.getElementById('display').innerText = "0";
+        }
+    </script>
+
+</body>
+</html>
